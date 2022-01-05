@@ -53,6 +53,16 @@ const routes = [
     path: '/saveExample',
     name: 'SaveExample',
     component: () => import(/* webpackChunkName: "about" */ '../views/SaveExample.vue')
+  },
+  {
+    path: '/slotUseModalLayout',
+    name: 'slotUseModalLayout',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SlotUseModalLayout.vue')
+  },
+  {
+    path: '/provideInjectChildChild',
+    name: 'provideInjectChildChild',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProvideInjectChildChild.vue')
   }
 ]
 
