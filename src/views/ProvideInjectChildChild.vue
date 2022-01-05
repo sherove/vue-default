@@ -1,29 +1,21 @@
 <template>
    <div>
-      Item Length : {{ this.itemLength}}
+      Item Length : {{ this.itemLength }} <br>
+      <!-- Items: {{ this.items.length }} -->
    </div>
 </template>
 <script>
-   export default {
+export default {
    name: '',
    components: {},
-   props: {
-      itemLength: {
-         type: Number,
-         default: 0
-      }
-   },
-   data() {
-      return {
-         sampleData: ''
-      };
-   },
-   setup() {},
-   created() {},
-   mounted() {},
-   unmounted() {},
-   methods: {
-   }}
+   // props: {
+   //    itemLength: {
+   //       type: Number,
+   //       default: 0
+   //    }
+   // },
+   inject: ["itemLength", "items"] //provide에 키값을 [key] 배열형태로 넣어줌
+}
 </script>
 <style>
 </style>

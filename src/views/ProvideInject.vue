@@ -1,12 +1,14 @@
 <template>
    <div>
-      <ProvideInjectChild :itemLength="items.length"></ProvideInjectChild>
+      <!-- <ProvideInjectChild :itemLength="items.length"></ProvideInjectChild> -->
+      <ProvideInjectChild></ProvideInjectChild> <!-- 자식에게 props로 전달 ㄴㄴ -->
    </div>
+   <div>부모 : {{items.length}}</diV>
 </template>
 <script>
 import ProvideInjectChild from "./ProvideInjectChild"
 
-   export default {
+export default {
    name: '',
    components: {
       ProvideInjectChild
@@ -16,12 +18,13 @@ import ProvideInjectChild from "./ProvideInjectChild"
          items: ['asb', 'bbb']
       };
    },
-   setup() {},
-   created() {},
-   mounted() {},
-   unmounted() {},
-   methods: {
-   }}
+   provide() {
+      return {
+         itemLength: this.items.length,
+         items: this.items
+      }
+   }
+}
 </script>
 <style>
 </style>

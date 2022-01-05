@@ -41,6 +41,9 @@
          </tbody>
       </table>
    </div>
+   <div>
+      {{items.length}}
+   </div>
 </template>
 <script>
    export default {
@@ -88,7 +91,8 @@
             {product_name: '기계식 키보드', price: 25000, delivery_price:5000, category: '전자제품'},
             {product_name: '마우스', price: 4000, delivery_price:2500, category: '전자제품'},
             {product_name: '모니터', price: 125000, delivery_price:5000, category: '전자제품'},
-         ]
+         ],
+         items: ['바나나', '딸기']
       };
    },
    methods: {
