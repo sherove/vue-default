@@ -10,4 +10,9 @@ const app = createApp(App)
 app.use(router)
 app.use(VueSweetalert2)
 app.mixin(grobalMixin) // 글로벌믹스인 사용법
+app.directive('focusCusor2', {
+    mounted(el) {
+        el.focus();
+    }
+})
 app.mount('#app')

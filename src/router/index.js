@@ -78,6 +78,21 @@ const routes = [
     path: '/mixin',
     name: 'MixinTest',
     component: () => import(/* webpackChunkName: "about" */ '../views/MixinTest.vue')
+  },
+  {
+    path: '/compositionapi2',
+    name: 'CompositionAPI2',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI2.vue')
+  },
+  {
+    path: '/compositionapi4',
+    name: 'CompositionAPI4',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI4.vue')
+  },
+  {
+    path: '/customDirective',
+    name: 'CustomDirective',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CustomDirective.vue')
   }
 ]
 
